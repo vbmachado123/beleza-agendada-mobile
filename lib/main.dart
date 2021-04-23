@@ -1,4 +1,6 @@
 import 'package:beleza_agendada/config/colors.dart';
+import 'package:beleza_agendada/views/login.dart';
+import 'package:beleza_agendada/views/resgister_form.dart';
 import 'package:beleza_agendada/views/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       home: SplashScreen(
-          seconds:8,
+          seconds:5,
           navigateAfterSeconds: new WelcomePage(),
           image: new Image.asset('images/logo_white.png') ,
           title: new Text('beleza agendada',

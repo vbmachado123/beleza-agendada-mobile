@@ -184,8 +184,6 @@ class _WelcomePageState extends State<WelcomePage> {
               color: Color.fromRGBO(216, 93, 99, 1),
             ))
       ],
-    )
-
-            ));
+    )));
   }
 }
