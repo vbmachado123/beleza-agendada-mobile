@@ -1,3 +1,4 @@
+import 'package:beleza_agendada/core/core.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -23,36 +24,16 @@ class _WelcomePageState extends State<WelcomePage> {
               Positioned(
                   left: 0,
                   right: 0,
-                  child: Text(
-                    'Bem-Vindo',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 1),
-                        fontFamily: 'Poppins',
-                        fontSize: 34,
-                        letterSpacing:
-                            0 /*percentages not used in flutter. defaulting to zero*/,
-                        fontWeight: FontWeight.normal,
-                        height: 1.5 /*PERCENT not supported*/
-                        ),
-                  )),
+                  child: Text('Bem-Vindo',
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.h4_bold)),
               Positioned(
                   top: 88,
                   left: 0,
                   right: 0,
-                  child: Text(
-                    'Deseja entrar como?',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 1),
-                        fontFamily: 'Poppins',
-                        fontSize: 20,
-                        letterSpacing:
-                            0 /*percentages not used in flutter. defaulting to zero*/,
-                        fontWeight: FontWeight.normal,
-                        height: 1.5 /*PERCENT not supported*/
-                        ),
-                  )),
+                  child: Text('Deseja entrar como?',
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.h6_regular)),
             ])),
         Container(
             width: 382,

@@ -19,12 +19,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       home: SplashScreen(
-          seconds:5,
+          seconds: 5,
           navigateAfterSeconds: new WelcomePage(),
-          image: new Image.asset('images/logo_white.png') ,
+          image: new Image.asset('images/logo_white.png'),
           title: new Text('beleza agendada',
-              style:
-                  new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0 , color: Colors.white)),
+              style: new TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  color: Colors.white)),
           backgroundColor: HexColor(clienteColor),
           styleTextUnderTheLoader: new TextStyle(),
           photoSize: 100.0,
