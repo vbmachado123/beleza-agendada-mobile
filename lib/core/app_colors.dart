@@ -13,11 +13,13 @@ class AppColors {
   static final Color black0 = Color(0xFF262D33);
   static final Color black1 = Color(0xFF1F2429);
 
+  // Primary
   // Purple
   static final Color purple_1 = Color(0xFFA268D9);
   static final Color purple0 = Color(0xFF9247D9);
   static final Color purple1 = Color(0xFF8943CC);
 
+  // Secundary
   // Red
   static final Color red_1 = Color(0xFFE07075);
   static final Color red0 = Color(0xFFD95E63);
@@ -28,6 +30,7 @@ class AppColors {
   static final Color green0 = Color(0xFF36C14C);
   static final Color green1 = Color(0xFF31B045);
 
+  // Tertiary
   // Blue
   static final Color blue_1 = Color(0xFF4475A6);
   static final Color blue0 = Color(0xFF336699);

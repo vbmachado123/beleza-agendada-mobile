@@ -1,4 +1,5 @@
 import 'package:beleza_agendada/core/core.dart';
+import 'package:beleza_agendada/shared/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -131,39 +132,13 @@ class _WelcomePageState extends State<WelcomePage> {
               ],
               color: Color.fromRGBO(255, 255, 255, 1),
             )),
-        Container(
-            width: 382,
-            height: 64,
-            margin: EdgeInsets.only(left: 8, right: 8, top: 100),
-            alignment: Alignment.center,
-            child: Text(
-              'ENTRAR',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromRGBO(238, 243, 248, 1),
-                  fontFamily: 'Poppins',
-                  fontSize: 20,
-                  letterSpacing:
-                      0 /*percentages not used in flutter. defaulting to zero*/,
-                  fontWeight: FontWeight.normal,
-                  height: 1.5 /*PERCENT not supported*/
-                  ),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16),
-                topRight: Radius.circular(16),
-                bottomLeft: Radius.circular(16),
-                bottomRight: Radius.circular(16),
-              ),
-              boxShadow: [
-                BoxShadow(
-                    color: Color.fromRGBO(0, 0, 0, 0.18000000715255737),
-                    offset: Offset(0, 4),
-                    blurRadius: 11)
-              ],
-              color: Color.fromRGBO(216, 93, 99, 1),
-            ))
+        SizedBox(
+          height: 64,
+        ),
+        ButtonWidget.red(
+          label: "ENTRAR",
+          onTap: () {},
+        ),
       ],
     )));
   }

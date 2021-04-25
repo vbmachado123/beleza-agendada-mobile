@@ -37,8 +37,14 @@ class AppTextStyles {
   );
 
   static final TextStyle h4_bold = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 34,
+    fontWeight: FontWeight.bold,
+  );
+
+  static final TextStyle h5_bold = GoogleFonts.poppins(
+    color: AppColors.black1,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
@@ -55,7 +61,7 @@ class AppTextStyles {
   );
 
   static final TextStyle h6_bold = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 20,
     fontWeight: FontWeight.bold,
   );
