@@ -1,7 +1,5 @@
 import 'package:beleza_agendada/config/colors.dart';
-import 'package:beleza_agendada/views/login.dart';
 import 'package:beleza_agendada/views/resgister_form.dart';
-import 'package:beleza_agendada/views/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -20,16 +18,11 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashScreen(
           seconds: 5,
-          navigateAfterSeconds: new WelcomePage(),
-          image: new Image.asset('images/logo_white.png'),
-          title: new Text('beleza agendada',
-              style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                  color: Colors.white)),
+          navigateAfterSeconds: new RegisterPage(),
+          image: new Image.asset('images/splash_logo.png'),
           backgroundColor: HexColor(clienteColor),
           styleTextUnderTheLoader: new TextStyle(),
-          photoSize: 100.0,
+          photoSize: 200.0,
           onClick: () => print("Flutter Egypt"),
           loaderColor: Colors.white),
     );

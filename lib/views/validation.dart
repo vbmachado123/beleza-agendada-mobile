@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PasswordPage extends StatefulWidget {
-  PasswordPage({Key key}) : super(key: key);
+class ValidationPage extends StatefulWidget {
+  ValidationPage({Key key}) : super(key: key);
 
   @override
-  _PasswordPageState createState() => _PasswordPageState();
+  _ValidationPageState createState() => _ValidationPageState();
 }
 
-class _PasswordPageState extends State<PasswordPage> {
+class _ValidationPageState extends State<ValidationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _PasswordPageState extends State<PasswordPage> {
           leading: IconButton(
               icon: Image.asset("images/back_arrow.png"), onPressed: () {}),
           title: Text(
-            "Recuperar a senha",
+            "Validação",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color(0xff2c343b),
@@ -37,48 +37,68 @@ class _PasswordPageState extends State<PasswordPage> {
                 right: 0,
                 child: Column(children: [
                   Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Digite o código de verificação",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xff262c33),
+                          fontSize: 34,
+                        ),
+                      )),
+                  Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Por favor, digite o seu telefone. Você receberá um código para a atualização",
+                        "O código foi enviado para o número +55 11 99897-1053 via SMS",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Color(0xff0f3242),
                           fontSize: 16,
                         ),
                       )),
                   Container(
-                    width: 382,
-                    height: 64,
-                    margin: EdgeInsets.only(top: 20),
-                    child: TextField(
-                      obscureText: false,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          labelText: 'Seu telefone',
-                          contentPadding: EdgeInsets.all(12.0)),
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x2d000000),
-                          blurRadius: 11,
-                          offset: Offset(0, 4),
-                        ),
+                    width: 384,
+                    height: 54.28,
+                    margin: EdgeInsets.only(top: 10),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 54,
+                          height: 54,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0x2d000000),
+                                blurRadius: 11,
+                                offset: Offset(0, 4),
+                              ),
+                            ],
+                            color: Colors.white,
+                          ),
+                        )
                       ],
-                      color: Colors.white,
                     ),
                   ),
                   SizedBox(height: 8.0),
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      "Outra forma de recuperar",
+                      "O token expira em 1:52",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(0xff9247d9),
                         fontSize: 16,
                       ),
                     ),
+                  ),
+                  SizedBox(height: 20.0),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text("Não recebeu o código? Reenviar ",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                        )),
                   )
                 ])),
             Positioned(
@@ -92,7 +112,7 @@ class _PasswordPageState extends State<PasswordPage> {
                     height: 64,
                     alignment: Alignment.center,
                     child: Text(
-                      "PRÓXIMO",
+                      "VALIDAR CÓDIGO",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(0xffeef3f8),

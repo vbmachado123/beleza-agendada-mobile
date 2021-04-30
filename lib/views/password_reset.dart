@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PasswordPage extends StatefulWidget {
-  PasswordPage({Key key}) : super(key: key);
+class PasswordResetPage extends StatefulWidget {
+  PasswordResetPage({Key key}) : super(key: key);
 
   @override
-  _PasswordPageState createState() => _PasswordPageState();
+  _PasswordResetPageState createState() => _PasswordResetPageState();
 }
 
-class _PasswordPageState extends State<PasswordPage> {
+class _PasswordResetPageState extends State<PasswordResetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _PasswordPageState extends State<PasswordPage> {
           leading: IconButton(
               icon: Image.asset("images/back_arrow.png"), onPressed: () {}),
           title: Text(
-            "Recuperar a senha",
+            "Esqueci a senha",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color(0xff2c343b),
@@ -39,7 +39,7 @@ class _PasswordPageState extends State<PasswordPage> {
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Por favor, digite o seu telefone. Você receberá um código para a atualização",
+                        "Digite sua nova senha para redefinir",
                         style: TextStyle(
                           color: Color(0xff0f3242),
                           fontSize: 16,
@@ -50,10 +50,10 @@ class _PasswordPageState extends State<PasswordPage> {
                     height: 64,
                     margin: EdgeInsets.only(top: 20),
                     child: TextField(
-                      obscureText: false,
+                      obscureText: true,
                       decoration: InputDecoration(
                           border: InputBorder.none,
-                          labelText: 'Seu telefone',
+                          labelText: 'Senha',
                           contentPadding: EdgeInsets.all(12.0)),
                     ),
                     decoration: BoxDecoration(
@@ -68,16 +68,27 @@ class _PasswordPageState extends State<PasswordPage> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 8.0),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Outra forma de recuperar",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(0xff9247d9),
-                        fontSize: 16,
-                      ),
+                  Container(
+                    width: 382,
+                    height: 64,
+                    margin: EdgeInsets.only(top: 20),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          labelText: 'Confirmar Senha',
+                          contentPadding: EdgeInsets.all(12.0)),
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x2d000000),
+                          blurRadius: 11,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                      color: Colors.white,
                     ),
                   )
                 ])),
@@ -92,7 +103,7 @@ class _PasswordPageState extends State<PasswordPage> {
                     height: 64,
                     alignment: Alignment.center,
                     child: Text(
-                      "PRÓXIMO",
+                      "REDEFINIR SENHA",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(0xffeef3f8),
