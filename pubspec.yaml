@@ -1,8 +1,6 @@
 name: beleza_agendada
 description: A new Flutter project.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
@@ -20,6 +18,8 @@ dependencies:
   hexcolor: ^2.0.3
   dio: ^4.0.0
   mask_text_input_formatter: ^1.2.1
+  qr_flutter: ^4.0.0 # Tela de QR Code
+  flutter_svg: ^0.22.0 # Icones e a logo
 
 dev_dependencies:
   flutter_test:
@@ -31,5 +31,6 @@ flutter:
 
   assets:
     - images/
+    - images/icons/
     - google_fonts/
   
