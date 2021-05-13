@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+import 'views/home.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashScreen(
           seconds: 5,
-          navigateAfterSeconds: new RegisterPage(),
+          navigateAfterSeconds: new HomePage(),
           image: new Image.asset('images/splash_logo.png'),
           backgroundColor: HexColor(clienteColor),
           styleTextUnderTheLoader: new TextStyle(),

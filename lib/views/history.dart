@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SchedulingPage extends StatefulWidget {
-  SchedulingPage({Key key}) : super(key: key);
+class HistoryPage extends StatefulWidget {
+  HistoryPage({Key key}) : super(key: key);
 
   @override
-  _SchedulingPageState createState() => _SchedulingPageState();
+  _HistoryPagePageState createState() => _HistoryPagePageState();
 }
 
-class _SchedulingPageState extends State<SchedulingPage> {
+class _HistoryPagePageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +15,12 @@ class _SchedulingPageState extends State<SchedulingPage> {
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
         leading: IconButton(
-            icon: Image.asset("images/back_arrow.png"), onPressed: () {
-          Navigator.pop(context);
-        }),
+            icon: Image.asset("images/back_arrow.png"),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         title: Text(
-          "Agendamentos",
+          "Histórico",
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Color(0xff2c343b),
@@ -56,7 +57,7 @@ class _SchedulingPageState extends State<SchedulingPage> {
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children:[
+                    children: [
                       Container(
                         width: 382,
                         height: 118,
@@ -72,7 +73,7 @@ class _SchedulingPageState extends State<SchedulingPage> {
                           color: Color(0xfff3f6f8),
                         ),
                         child: Stack(
-                          children:[
+                          children: [
                             Positioned(
                               left: 285,
                               top: 32,
@@ -115,7 +116,7 @@ class _SchedulingPageState extends State<SchedulingPage> {
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
+                                  children: [
                                     SizedBox(
                                       width: 214,
                                       child: Text(
