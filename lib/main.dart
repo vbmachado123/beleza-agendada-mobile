@@ -3,8 +3,7 @@ import 'package:beleza_agendada/views/resgister_form.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:splashscreen/splashscreen.dart';
-
-import 'views/home.dart';
+import 'package:beleza_agendada/views/qr_code.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashScreen(
           seconds: 5,
-          navigateAfterSeconds: new HomePage(),
+          navigateAfterSeconds: new QrCodePage(),
           image: new Image.asset('images/splash_logo.png'),
           backgroundColor: HexColor(clienteColor),
           styleTextUnderTheLoader: new TextStyle(),

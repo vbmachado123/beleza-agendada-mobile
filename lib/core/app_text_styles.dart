@@ -7,49 +7,49 @@ import 'app_colors.dart';
 
 class AppTextStyles {
   static final TextStyle h1_regular = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 96,
     fontWeight: FontWeight.normal,
   );
 
   static final TextStyle h2_regular = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 60,
     fontWeight: FontWeight.normal,
   );
 
   static final TextStyle h3_regular = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 48,
     fontWeight: FontWeight.normal,
   );
 
   static final TextStyle h3_bold = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 48,
     fontWeight: FontWeight.bold,
   );
 
   static final TextStyle h4_regular = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 34,
     fontWeight: FontWeight.normal,
   );
 
   static final TextStyle h4_bold = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 34,
     fontWeight: FontWeight.bold,
   );
 
   static final TextStyle h5_regular = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 24,
     fontWeight: FontWeight.normal,
   );
 
   static final TextStyle h6_regular = GoogleFonts.poppins(
-    color: AppColors.black1,
+    color: AppColors.black_1,
     fontSize: 20,
     fontWeight: FontWeight.normal,
   );
