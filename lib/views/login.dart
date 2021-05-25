@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:beleza_agendada/controllers/authController.dart'
+    as authController;
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -277,33 +279,43 @@ class _LoginPageState extends State<LoginPage> {
                   fontWeight: FontWeight.w500,
                 ),
               ))),
-      Container(
-        width: 382,
-        height: 64,
-        alignment: Alignment.center,
-        child: Text(
-          "FAZER LOGIN",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Color(0xffeef3f8),
-            fontSize: 20,
-            fontFamily: "Poppins",
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        margin: EdgeInsets.only(top: 30, left: 10, right: 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              color: Color(0x2d000000),
-              blurRadius: 11,
-              offset: Offset(0, 4),
-            ),
-          ],
-          color: Color(0xffd85d63),
-        ),
-      ),
+
+              GestureDetector(
+                  onTap: (){
+
+                    
+                    //authController.AuthController.login(email, password)
+                  
+                  },
+                  child:Container(
+                      width: 382,
+                      height: 64,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "FAZER LOGIN",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xffeef3f8),
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      margin: EdgeInsets.only(top: 30, left: 10, right: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x2d000000),
+                            blurRadius: 11,
+                            offset: Offset(0, 4),
+                          ),
+                        ],
+                        color: Color(0xffd85d63),
+                      ),
+                    ) ,
+              )
+      ,
       Container(
           width: 382,
           height: 64,

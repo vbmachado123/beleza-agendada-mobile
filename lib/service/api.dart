@@ -1,10 +1,17 @@
+import 'dart:convert';
+
 import 'package:beleza_agendada/models/customer.dart';
 import 'package:dio/dio.dart';
 import 'dart:io';
 
+import 'package:flutter/material.dart';
+
 class ApiClientService {
   static final _dio = Dio();
   static String serverUrl = "http://localhost:3333";
+
+
+  //TODO : TRATAR MENSAGENS DE ERRO;
 
   ApiClientService();
 
@@ -26,11 +33,13 @@ class ApiClientService {
           },
         ));
 
+        
+
     var data = response.data;
     return data;
   }
 
-  static Future signUp(Customer customer) async {
+  static Future signUp(Customer customer , BuildContext context) async {
     var url = serverUrl + '/signup';
     var payLoad = Map<String, dynamic>();
 
@@ -47,7 +56,19 @@ class ApiClientService {
           },
         ));
 
+    print("response.statusCode");
+    print(response.statusCode);
+    /*if(response.statusCode == 200 ){
+        var data = response.data;
+        return data;
+    }else{
+        showDialog(context: context, builder: (BuildContext context) { return AlertDialog(title: Text(response.statusMessage)); } );
+        return null;
+       
+    }*/
+
     var data = response.data;
     return data;
+    
   }
 }

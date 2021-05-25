@@ -6,6 +6,7 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:beleza_agendada/controllers/authController.dart'
     as authController;
 
+
 class RegisterPage extends StatefulWidget {
   RegisterPage({Key key}) : super(key: key);
 
@@ -151,105 +152,107 @@ class _RegisterPageState extends State<RegisterPage> {
   initStep(bool next) {
     setState(() {
       incrementDecrementCounter(next);
+       });
 
-      if (stepCounter == 1) {
-        Timer(Duration(seconds: 1), () {
-          setState(() {
-            _currentInfoWidget = _nameWidthBuilder();
-          });
-        });
+      switch (stepCounter) {
+        case 1 :  
+              Timer(Duration(seconds: 1), () {
+                setState(() {
+                  _currentInfoWidget = _nameWidthBuilder();
+                });
+              });
+          break;
+        case 2 :  
+          if (_resgisterNameTextEditingController.text.isNotEmpty) {
+              _emailValidator = false;
+              _currentOpacity = 0;
+              Timer(Duration(seconds: 1), () {
+                setState(() {
+                  _currentInfoWidget = _emailWidthBuilder();
+                });
+              });
+            } else {
+              stepCounter = 1;
+              _emailValidator = true;
+            }
+          break;
+          case 3 : 
+
+             if (_resgisterEmailTextEditingController.text.isNotEmpty) {
+                _passwordValidator = false;
+                _currentOpacity = 0;
+                Timer(Duration(seconds: 1), () {
+                  setState(() {
+                    _currentInfoWidget = _passwordWidthBuilder();
+                  });
+                });
+              } else {
+                stepCounter = 2;
+                _passwordValidator = true;
+              }
+               break;
+          case 4 : 
+                if (_resgisterPassWordTextEditingController.text.isNotEmpty) {
+                  _phoneValidator = false;
+                  _currentOpacity = 0;
+                  Timer(Duration(seconds: 1), () {
+                    setState(() {
+                      _currentInfoWidget = _phoneWidthBuilder();
+                    });
+                  });
+                } else {
+                  stepCounter = 3;
+                  _phoneValidator = true;
+                }
+                break;
+            case 5 : 
+                   if (_resgisterPhoneTextEditingController.text.isNotEmpty) {
+                    _birthdayValidator = false;
+                    _currentOpacity = 0;
+                    Timer(Duration(seconds: 1), () {
+                      setState(() {
+                        _currentInfoWidget = _birthdayWidthBuilder();
+                      });
+                    });
+                  } else {
+                    stepCounter = 4;
+                    _birthdayValidator = true;
+                  }
+                  break;
+            case 6 : 
+                   Timer(Duration(seconds: 1), () {
+                    setState(() {
+                      _currentInfoWidget = _genderWidthBuilder();
+                    });
+                  });
+              break;
+            case 7 :
+
+             if (genderFieldValue.isNotEmpty) {
+                  String name = _resgisterNameTextEditingController.text;
+                  String email = _resgisterEmailTextEditingController.text;
+                  String password = _resgisterPassWordTextEditingController.text;
+                  String phone = _resgisterPhoneTextEditingController.text;
+                  String birthday = _resgisterBirthdayTextEditingController.text;
+                  String gender = genderFieldValue;
+
+                  Customer customer = Customer(
+                      name: name,
+                      email: email,
+                      password: password,
+                      phone: phone,
+                      birthday: birthday,
+                      gender: gender);
+
+                  authController.AuthController.signUp(customer,context);
+
+                
+                }
+                break;
+
+        default:
       }
-
-      if (stepCounter == 2) {
-        if (_resgisterNameTextEditingController.text.isNotEmpty) {
-          _emailValidator = false;
-          _currentOpacity = 0;
-          Timer(Duration(seconds: 1), () {
-            setState(() {
-              _currentInfoWidget = _emailWidthBuilder();
-            });
-          });
-        } else {
-          stepCounter = 1;
-          _emailValidator = true;
-        }
-      }
-
-      if (stepCounter == 3) {
-        if (_resgisterEmailTextEditingController.text.isNotEmpty) {
-          _passwordValidator = false;
-          _currentOpacity = 0;
-          Timer(Duration(seconds: 1), () {
-            setState(() {
-              _currentInfoWidget = _passwordWidthBuilder();
-            });
-          });
-        } else {
-          stepCounter = 2;
-          _passwordValidator = true;
-        }
-      }
-
-      if (stepCounter == 4) {
-        if (_resgisterPassWordTextEditingController.text.isNotEmpty) {
-          _phoneValidator = false;
-          _currentOpacity = 0;
-          Timer(Duration(seconds: 1), () {
-            setState(() {
-              _currentInfoWidget = _phoneWidthBuilder();
-            });
-          });
-        } else {
-          stepCounter = 3;
-          _phoneValidator = true;
-        }
-      }
-
-      if (stepCounter == 5) {
-        if (_resgisterPhoneTextEditingController.text.isNotEmpty) {
-          _birthdayValidator = false;
-          _currentOpacity = 0;
-          Timer(Duration(seconds: 1), () {
-            setState(() {
-              _currentInfoWidget = _birthdayWidthBuilder();
-            });
-          });
-        } else {
-          stepCounter = 4;
-          _birthdayValidator = true;
-        }
-      }
-
-      if (stepCounter == 6) {
-        Timer(Duration(seconds: 1), () {
-          setState(() {
-            _currentInfoWidget = _genderWidthBuilder();
-          });
-        });
-      }
-
-      print(stepCounter);
-      if (stepCounter == 7) {
-        if (genderFieldValue.isNotEmpty) {
-          String name = _resgisterNameTextEditingController.text;
-          String email = _resgisterEmailTextEditingController.text;
-          String password = _resgisterPassWordTextEditingController.text;
-          String phone = _resgisterPhoneTextEditingController.text;
-          String birthday = _resgisterBirthdayTextEditingController.text;
-          String gender = genderFieldValue;
-
-          Customer customer = Customer(
-              name: name,
-              email: email,
-              password: password,
-              phone: phone,
-              birthday: birthday,
-              gender: gender);
-
-          authController.AuthController.signUp(customer);
-        }
-      }
-    });
+   
   }
 
   @override

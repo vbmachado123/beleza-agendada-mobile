@@ -6,7 +6,6 @@ class Bussiness {
   String birthday;
   String gender;
   String photoURL;
-  String date;
 
   Bussiness(
       {this.id,
@@ -15,8 +14,7 @@ class Bussiness {
       this.email,
       this.birthday,
       this.gender,
-      this.photoURL,
-      this.date});
+      this.photoURL});
 
   Bussiness.fromJson(Map<String, dynamic> json)
       : id = json['id'],
@@ -25,8 +23,7 @@ class Bussiness {
         email = json['email'],
         birthday = json['birthday'],
         gender = json['gender'],
-        photoURL = json['photoURL'],
-        date = json['date'];
+        photoURL = json['photoURL'];
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -35,7 +32,6 @@ class Bussiness {
         'email': email,
         'birthday': birthday,
         'gender': gender,
-        'photoURL': photoURL,
-        'date': date
+        'photoURL': photoURL
       };
 }
